@@ -1,0 +1,11 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+node_modules
+wp-content
+export.xml
+Gemfile
+Gemfile.lock
+.tool-versions
