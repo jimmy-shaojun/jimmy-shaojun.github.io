@@ -59,18 +59,25 @@ To better understand **Y**, let's apply **R** to **Y**.
 ```
 (1) YR = (λy.(λx.y(xx))(λx.y(xx)))R
 ```
+
 substitute variable y with R we get
 > 将参数y 替换为R，我们可以得到下列结果
+
 ```
 (2) (λx.R(xx))(λx.R(xx))
 ```
+
 which means apply the 2nd **(λx.R(xx))** to 1st **(λx.R(xx))**, and we get
 > 而该结果表示调用(λx.R(xx))，参数为(λx.R(xx))，因此我们可以得到下列结果
+
 ```
 (3) R((λx.R(xx)(λx.R(xx)) = R(YR)
 ```
+
 If we look at (1) and (2) we can know that **(λx.R(xx)(λx.R(xx)** is equal to **YR**, which means (3) is actually **R(YR)**, so we have 
+
 > 我们将(1)(2)进行对照，不难发现，**(λx.R(xx)(λx.R(xx)** 其实等于**YR**，于是，我们可以将(3)进一步化简得到下列结果
+
 ```
 (4) YR = R(YR) = R(R(YR)) = R(R(R(YR))) ....
 ```
