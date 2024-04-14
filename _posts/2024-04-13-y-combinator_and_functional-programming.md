@@ -142,6 +142,6 @@ then the 1st haskell lambda **(\f -> \x -> ...)** is called with parameter **f**
         else f(x-1)+f(x-2) 
 ```
 
-And we know that **f** is **y r = (y (\f -> \x -> ...))**, thus, recursion is supported.
+And we know that **f** is **y r = (y (\f -> \x -> ...))**, thus, recursion is supported by lambda calculus via Y combinator.
 
-> 而**f**就对应了**y r = (y (\f -> \x -> ...))**，因此fib函数可以实现递归
+> 而**f**就对应了**y r = (y (\f -> \x -> ...))**，因此fib函数通过Y combinator可以实现递归。
