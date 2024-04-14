@@ -68,6 +68,7 @@ substitute variable y with R we get
 ```
 
 which means apply the 2nd **(λx.R(xx))** to 1st **(λx.R(xx))**, and we get
+
 > 而该结果表示调用(λx.R(xx))，参数为(λx.R(xx))，因此我们可以得到下列结果
 
 ```
@@ -119,6 +120,7 @@ To better understand the above example, please note that **y** function is exact
 ```
 
 For `(fib 3)` in haskell,  if transalted to lambda calculus, we are doing 
+
 > 让我们尝试来调用haskell的(fib 3)
 
 **fib 3** =**y r 3** = **r (y r) 3** 
