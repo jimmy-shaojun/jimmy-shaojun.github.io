@@ -113,7 +113,7 @@ hostResolver:
   hosts:
     host.docker.internal: host.lima.internal
 portForwards:
-- guestSocket: "/var/run/docker.sock"
+- guestSocket: "/run/user/{{.UID}}/docker.sock"
   hostSocket: "{{.Dir}}/sock/docker.sock"
 message: |
   To run `docker` on the host (assumes docker-cli is installed), run the following commands:
