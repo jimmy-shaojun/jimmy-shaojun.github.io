@@ -104,10 +104,14 @@
 
     let currentCameraIndex = 0;
     let devices = [];
-    let stream = null;
 
     async function getCameraStream(deviceId) {
+     
+      const videoElement = document.getElementById('videoElement');
       // Stop the current stream (if exists) before starting a new one
+      // When the video feed is ready, start detection
+      videoElement.onloadeddata = undefined
+
       if (stream) {
         const tracks = stream.getTracks();
         tracks.forEach(track => track.stop());
@@ -117,11 +121,16 @@
       stream = await navigator.mediaDevices.getUserMedia({
         video: { deviceId }
       });
-      const videoElement = document.getElementById('videoElement');
+      
       videoElement.srcObject = stream;
       videoElement.setAttribute('autoplay', '');
       videoElement.setAttribute('muted', '');
       videoElement.setAttribute('playsinline', '')
+
+      // When the video feed is ready, start detection
+      videoElement.onloadeddata = async () => {
+        detectReceipt();
+      };
     }
 
     async function enumerateAndSetupCameras() {
@@ -137,6 +146,7 @@
     document.getElementById('switchCameraBtn').addEventListener('click', async () => {
       // Go to the next camera in the list, wrap around to the first camera if at the end
       currentCameraIndex = (currentCameraIndex + 1) % devices.length;
+      console.log(devices.length)
       await getCameraStream(devices[currentCameraIndex].deviceId);
     });
 
@@ -153,11 +163,6 @@
       croppedImage = document.getElementById('croppedImage');
 
       enumerateAndSetupCameras();
-
-      // When the video feed is ready, start detection
-      videoElement.onloadeddata = async () => {
-        detectReceipt();
-      };
 
       // Set capture button click action
       captureButton.addEventListener('click', captureImage);
