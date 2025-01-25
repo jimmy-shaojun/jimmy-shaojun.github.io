@@ -102,6 +102,9 @@
       // Start video feed
       stream = await navigator.mediaDevices.getUserMedia({ video: true });
       videoElement.srcObject = stream;
+      videoElement.setAttribute('autoplay', '');
+      videoElement.setAttribute('muted', '');
+      videoElement.setAttribute('playsinline', '')
 
       // When the video feed is ready, start detection
       videoElement.onloadeddata = async () => {
