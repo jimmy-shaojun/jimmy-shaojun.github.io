@@ -110,7 +110,6 @@
       const videoElement = document.getElementById('videoElement');
       // Stop the current stream (if exists) before starting a new one
       // When the video feed is ready, start detection
-      videoElement.onloadeddata = undefined
 
       if (stream) {
         const tracks = stream.getTracks();
@@ -126,16 +125,15 @@
       videoElement.setAttribute('autoplay', '');
       videoElement.setAttribute('muted', '');
       videoElement.setAttribute('playsinline', '')
-
-      // When the video feed is ready, start detection
-      videoElement.onloadeddata = async () => {
-        detectReceipt();
-      };
     }
 
     async function enumerateAndSetupCameras() {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
       const deviceList = await navigator.mediaDevices.enumerateDevices();
-      devices = deviceList.filter(device => device.kind === 'videoinput'); // Only video devices
+      for(const d of deviceList) {
+        console.log(d)
+      }
+      devices = deviceList // Only video devices
       if (devices.length > 0) {
         // Start with the first camera
         await getCameraStream(devices[currentCameraIndex].deviceId);
@@ -161,6 +159,11 @@
       captureButton = document.getElementById('captureButton');
       croppedImageContainer = document.getElementById('croppedImageContainer');
       croppedImage = document.getElementById('croppedImage');
+
+      // When the video feed is ready, start detection
+      videoElement.onloadeddata = async () => {
+        detectReceipt();
+      };
 
       enumerateAndSetupCameras();
 
