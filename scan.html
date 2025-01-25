@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt Scanner</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #videoElement {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video covers the full screen */
+    }
+
+    #canvasElement {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Ensure canvas doesn't block user interaction */
+    }
+
+    #captureButton {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 0, 0, 0.8);
+      color: white;
+      font-size: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #captureButton:hover {
+      background-color: rgba(255, 0, 0, 1);
+    }
+
+    #croppedImageContainer {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    #croppedImage {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Element for Real-time Camera Feed -->
+  <video id="videoElement" autoplay></video>
+  
+  <!-- Canvas to Draw Bounding Box -->
+  <canvas id="canvasElement"></canvas>
+
+  <!-- Capture Button to Take the Photo -->
+  <button id="captureButton">Capture</button>
+
+  <!-- Hidden Container for Cropped Image -->
+  <div id="croppedImageContainer">
+    <img id="croppedImage" />
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script>
+    let model, videoElement, canvasElement, ctx, stream, captureButton, croppedImageContainer, croppedImage;
+    let currentFrame = null; // To store the cropped image
+
+    async function init() {
+      // Initialize TensorFlow model
+      model = await cocoSsd.load();
+
+      // Setup elements
+      videoElement = document.getElementById('videoElement');
+      canvasElement = document.getElementById('canvasElement');
+      ctx = canvasElement.getContext('2d');
+      captureButton = document.getElementById('captureButton');
+      croppedImageContainer = document.getElementById('croppedImageContainer');
+      croppedImage = document.getElementById('croppedImage');
+
+      // Start video feed
+      stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      videoElement.srcObject = stream;
+
+      // When the video feed is ready, start detection
+      videoElement.onloadeddata = async () => {
+        detectReceipt();
+      };
+
+      // Set capture button click action
+      captureButton.addEventListener('click', captureImage);
+    }
+
+    // Detecting receipt and drawing bounding box
+    async function detectReceipt() {
+      while (true) {
+        const predictions = await model.detect(videoElement);
+
+        // Clear the canvas before drawing new box
+        ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+
+        // Find the bounding box for the receipt (you might need to adjust the condition based on your use case)
+        predictions.forEach(prediction => {
+          if (prediction.class === 'receipt') {
+            const [x, y, width, height] = prediction.bbox;
+
+            // Draw the bounding box on the canvas
+            ctx.beginPath();
+            ctx.rect(x, y, width, height);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'red';
+            ctx.stroke();
+          }
+        });
+
+        // Pause to avoid too frequent updates
+        await new Promise(requestAnimationFrame);
+      }
+    }
+
+    // Capture the cropped receipt image
+    function captureImage() {
+      // Get the bounding box of the detected receipt
+      const predictions = model.detect(videoElement);
+      predictions.then((preds) => {
+        preds.forEach(prediction => {
+          if (prediction.class === 'receipt') {
+            const [x, y, width, height] = prediction.bbox;
+            
+            // Crop the receipt from the video feed
+            const cropCanvas = document.createElement('canvas');
+            const cropCtx = cropCanvas.getContext('2d');
+            cropCanvas.width = width;
+            cropCanvas.height = height;
+
+            // Draw the cropped image on the temporary canvas
+            cropCtx.drawImage(videoElement, x, y, width, height, 0, 0, width, height);
+
+            // Create an image from the canvas
+            const dataUrl = cropCanvas.toDataURL();
+
+            // Show the cropped image in the next UI screen
+            croppedImage.src = dataUrl;
+            croppedImageContainer.style.display = 'flex';
+          }
+        });
+      });
+    }
+
+    // Initialize the app
+    init();
+  </script>
+</body>
+</html>
