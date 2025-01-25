@@ -44,6 +44,20 @@
       cursor: pointer;
     }
 
+    #switchCameraBtn {
+      position: absolute;
+      bottom: 20px;
+      left: 10%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 0, 0, 0.8);
+      color: white;
+      font-size: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
     #captureButton:hover {
       background-color: rgba(255, 0, 0, 1);
     }
@@ -75,6 +89,7 @@
 
   <!-- Capture Button to Take the Photo -->
   <button id="captureButton">Capture</button>
+  <button id="switchCameraBtn">Switch Camera</button>
 
   <!-- Hidden Container for Cropped Image -->
   <div id="croppedImageContainer">
@@ -86,6 +101,44 @@
   <script>
     let model, videoElement, canvasElement, ctx, stream, captureButton, croppedImageContainer, croppedImage;
     let currentFrame = null; // To store the cropped image
+
+    let currentCameraIndex = 0;
+    let devices = [];
+    let stream = null;
+
+    async function getCameraStream(deviceId) {
+      // Stop the current stream (if exists) before starting a new one
+      if (stream) {
+        const tracks = stream.getTracks();
+        tracks.forEach(track => track.stop());
+      }
+
+      // Get the media stream for the selected deviceId
+      stream = await navigator.mediaDevices.getUserMedia({
+        video: { deviceId }
+      });
+      const videoElement = document.getElementById('videoElement');
+      videoElement.srcObject = stream;
+      videoElement.setAttribute('autoplay', '');
+      videoElement.setAttribute('muted', '');
+      videoElement.setAttribute('playsinline', '')
+    }
+
+    async function enumerateAndSetupCameras() {
+      const deviceList = await navigator.mediaDevices.enumerateDevices();
+      devices = deviceList.filter(device => device.kind === 'videoinput'); // Only video devices
+      if (devices.length > 0) {
+        // Start with the first camera
+        await getCameraStream(devices[currentCameraIndex].deviceId);
+      }
+    }
+
+    // Switch camera on button click
+    document.getElementById('switchCameraBtn').addEventListener('click', async () => {
+      // Go to the next camera in the list, wrap around to the first camera if at the end
+      currentCameraIndex = (currentCameraIndex + 1) % devices.length;
+      await getCameraStream(devices[currentCameraIndex].deviceId);
+    });
 
     async function init() {
       // Initialize TensorFlow model
@@ -99,12 +152,7 @@
       croppedImageContainer = document.getElementById('croppedImageContainer');
       croppedImage = document.getElementById('croppedImage');
 
-      // Start video feed
-      stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      videoElement.srcObject = stream;
-      videoElement.setAttribute('autoplay', '');
-      videoElement.setAttribute('muted', '');
-      videoElement.setAttribute('playsinline', '')
+      enumerateAndSetupCameras();
 
       // When the video feed is ready, start detection
       videoElement.onloadeddata = async () => {
