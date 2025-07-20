@@ -1,7 +1,7 @@
 ---
 layout: page_with_comment
 title: "Shard aware query in a Ruby on Rails application"
-date: "2024-09-22"
+date: "2025-01-06"
 tags:
   - "ruby"
   - "rails"
