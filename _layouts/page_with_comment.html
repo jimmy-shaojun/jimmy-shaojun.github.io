@@ -8,10 +8,19 @@ layout: page
 
 {{ content }}
 
-<script src="https://utteranc.es/client.js"
-        repo="jimmy-shaojun/jimmy-shaojun.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+<div id="disqus_thread"></div>
+<script>
+  // 评论以「与网址无关的稳定 id」为 key：优先用文章 front matter 里的 comment_id，
+  // 否则退回文件名 slug。将来换博客时，只要新文章用同一个 id，评论就能无缝跟过来。
+  var disqus_config = function () {
+    this.page.identifier = "{{ page.comment_id | default: page.slug }}";
+    this.page.url = "{{ page.url | absolute_url }}";
+  };
+  (function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://huang-sh.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
+<noscript>请启用 JavaScript 以查看评论。</noscript>

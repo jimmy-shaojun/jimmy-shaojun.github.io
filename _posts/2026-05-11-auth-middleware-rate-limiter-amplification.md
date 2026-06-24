@@ -9,6 +9,7 @@ tags:
   - "cloudflare-workers"
   - "performance"
   - "postmortem"
+comment_id: "2026-05-11-auth-middleware-rate-limiter-amplification"
 ---
 
 A bug that was latent for months, found by accident while chasing something else, and fixed in ten minutes once understood.

@@ -5,6 +5,7 @@ date: "2016-12-15"
 categories: 
   - "ios"
   - "mac"
+comment_id: "2016-12-15-openbakery-gradle-xcodeplugin在keychaincreate阶段报错"
 ---
 
 我在iOS的项目中使用了gradle-xcodePlugin进行打包工作，然而，最近gradle-xcodePlugin一直报如下错误。

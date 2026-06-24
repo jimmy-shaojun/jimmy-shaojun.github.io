@@ -1,0 +1,14 @@
+name: Lint posts
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  comment-id:
+    name: Every post has a comment_id
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check comment_id present in all posts
+        run: bash bin/check-comment-id.sh

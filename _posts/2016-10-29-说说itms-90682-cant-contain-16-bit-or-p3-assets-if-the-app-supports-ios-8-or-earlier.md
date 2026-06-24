@@ -15,6 +15,7 @@ tags:
   - "macos"
   - "p3"
   - "photoshop"
+comment_id: "2016-10-29-说说itms-90682-cant-contain-16-bit-or-p3-assets-if-the-app-supports-ios-8-or-earlier"
 ---
 
 昨日，我在工作中听到我部门打包好的IPA，到了测试的时候，一旦测试的手机是iOS 8或者9.2的手机，应用总是会随机崩溃。最后，同事们找到了原因，具体原因见 http://stackoverflow.com/questions/39404285/xcode-8-build-crash-on-ios-9-2-and-below

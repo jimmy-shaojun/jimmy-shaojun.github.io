@@ -13,6 +13,7 @@ tags:
   - "大疆"
   - "手持稳定器"
   - "蓝牙"
+comment_id: "2019-07-25-ios-13的新info-plist的key-nsbluetoothalwaysusagedescription，相关应用需要及时升级"
 ---
 
 iOS 13在隐私方面有了新的变化，其中一个变化对于视频录制类应用会有较大影响。那就是Privacy - Bluetooth Always Usage Description（NSBluetoothAlwaysUsageDescription）。 如果视频类应用支持手持稳定器，如大疆Osmo Mobile，而目前手持稳定器与手机之间都是通过蓝牙连接的，那么，App的Info.plist中需要添加该Key，否则，App在尝试连接手持稳定器的时候，会crash。

@@ -10,6 +10,7 @@ tags:
   - "random"
   - "swift"
   - "随机数"
+comment_id: "2019-07-10-swift语言的随机数：运行效率和安全性cryptographically-good"
 ---
 
 Apple推出Swift语言已经很多年了，如今，Swift语言已经进化到了5.1版本，很多细节也越来越完善了，不过，总的来说，Swift语言的overhead仍然较大，具体到随机数上，Swift内置的运行时生成随机数效率低，不适用于模拟，测试和游戏等对于cryptographically good要求不高的场景。

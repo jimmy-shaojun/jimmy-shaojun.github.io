@@ -12,6 +12,7 @@ tags:
   - "mirror"
   - "vcs"
   - "镜像"
+comment_id: "2018-05-02-由于golang-org不能正常访问导致的glide-install错误cannot-detect-vcs"
 ---
 
 [Go语言](https://golang.org)是Google推出的一种程序语言，[Glide](https://github.com/Masterminds/glide)是go语言的包管理器，可以解决项目的依赖关系。目前，Glide建议我们尽快迁移到[dep](https://github.com/golang/dep)上。

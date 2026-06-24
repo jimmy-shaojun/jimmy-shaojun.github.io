@@ -7,6 +7,7 @@ tags:
   - "pre-render"
   - "build"
   - "experimental-compile"
+comment_id: "2024-03-10-nextjs在build阶段pre-render产生了让人困扰的错误"
 ---
 
 最近，我的一个项目用nextjs作为前端，nestjs作为后端，postgres作为数据库。在开发阶段，一切都很好，直到我将前后端以及数据库都集成到一个docker-compose.yml之中，并且以[standalone](https://nextjs.org/docs/pages/api-reference/next-config-js/output)编译前端。

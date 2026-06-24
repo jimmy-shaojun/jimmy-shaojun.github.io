@@ -10,6 +10,7 @@ tags:
   - "fork"
   - "ios"
   - "resource"
+comment_id: "2017-05-08-resource-fork-finder-information-or-similar-detritus-not-allowed"
 ---
 
 今天，我准备更新我的一个app，这个app很久以前上架的，当时还是iPhone 32位 CPU的时候，所以有必要更新一次。

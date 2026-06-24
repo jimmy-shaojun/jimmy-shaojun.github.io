@@ -12,6 +12,7 @@ tags:
   - "phabricator"
   - "search"
   - "全文索引"
+comment_id: "2016-11-12-让phabricator支持中文的全文搜索"
 ---
 
 [Phabricator](https://secure.phabricator.com/)是一款优秀的开源项目管理、代码评审和代码管理平台，然而，默认情况下，它对于中文搜索的支持存在问题。

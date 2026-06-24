@@ -10,6 +10,7 @@ tags:
   - "coverage"
   - "pattern"
   - "matching"
+comment_id: "2024-06-24-simplecov-complains-that-1-branch-is-not-covered-in-pattern-matching"
 ---
 
 Pattern matching is a feature available in multiple programming languages that allows developers to test an expression to determine if it has certain characteristics.

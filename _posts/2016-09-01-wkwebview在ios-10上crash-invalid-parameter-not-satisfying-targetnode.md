@@ -10,6 +10,7 @@ tags:
   - "ios10"
   - "wkwebview"
   - "xcode"
+comment_id: "2016-09-01-wkwebview在ios-10上crash-invalid-parameter-not-satisfying-targetnode"
 ---
 
 近日，我遇到了一个让我感到匪夷所思的问题。App使用了WKWebView展示内容，然而，一旦iOS 10的用户手指触摸了WKWebView，app就会立即崩溃，而iOS 9的用户就不会遇到这个问题。

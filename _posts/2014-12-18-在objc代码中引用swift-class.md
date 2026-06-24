@@ -4,6 +4,7 @@ title: "在Objc代码中引用Swift Class"
 date: "2014-12-18"
 categories: 
   - "ios"
+comment_id: "2014-12-18-在objc代码中引用swift-class"
 ---
 
 最近写了几个Swift的Class，想要在Objc代码中用这几个Class，阅读Apple的《Use Swift with Cocoa and Objective-C》后，发现书中写到，"import the Xcode-generated header file for you swift code into any Objective-C .m file"，这也就是说，Xcode会为swift代码自动生成一个header文件，于是我到工程里找这个文件，居然没有找到。之后，尝试新建几个swift文件，也没有发现有新的h文件生成，这是怎么回事呢。

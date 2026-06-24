@@ -6,6 +6,7 @@ tags:
   - "ycombinator"
   - "functional programming"
   - "lambda calculus"
+comment_id: "2024-04-13-y-combinator_and_functional-programming"
 ---
 
 When people talk about Y combinator, they usually refer to [Y Combinator](https://www.ycombinator.com/), the startup accelerator. However, at the very beginning, Y-combinator is a function called Y in [lambda calculus](https://personal.utdallas.edu/~gupta/courses/apl/lambda.pdf).

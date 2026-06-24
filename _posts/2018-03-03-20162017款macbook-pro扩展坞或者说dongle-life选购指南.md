@@ -11,6 +11,7 @@ tags:
   - "macbook-pro"
   - "thunderbolt"
   - "雷雳3"
+comment_id: "2018-03-03-20162017款macbook-pro扩展坞或者说dongle-life选购指南"
 ---
 
 严重警告，我要给诸位一个警告，千万不要看了这篇文章 [2017开门红：MacBook Pro Thunderbolt 解锁 DELL 戴尔 TB15 扩展坞 开箱使用\_开箱晒物\_什么值得买](https://post.smzdm.com/p/522488/) 就去买一个DELL TB16来配自己的MacBook Pro。因为TB16完全不兼容MacBook Pro。买来TB16的话，你就会发现你如果没有戴尔电脑，你完全就是浪费钱。

@@ -9,6 +9,7 @@ tags:
   - "log"
   - "php"
   - "slow"
+comment_id: "2018-09-14-php-fpm-slow-log应用wordpress的captcha-booster插件导致我的个人blog因为最近有一"
 ---
 
 我的blog最近有一段时间不能访问了，总是报504 Gateway Timeout。 具体原因如下。

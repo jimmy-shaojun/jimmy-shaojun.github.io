@@ -4,6 +4,7 @@ title: "cocoapods 0.38导致的undefined method `project' for #"
 date: "2015-09-10"
 categories: 
   - "ios"
+comment_id: "2015-09-10-cocoapods-0-38导致的undefined-method-project-for"
 ---
 
 公司的iOS项目，需要给QA打包Debug版本的测试包，因此，我需要把ONLY\_ACTIVE\_ARCH给设置为FALSE，我用的是以下pod代码实现的这个功能。

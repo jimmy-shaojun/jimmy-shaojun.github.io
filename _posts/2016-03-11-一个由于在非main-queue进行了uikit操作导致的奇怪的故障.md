@@ -4,6 +4,7 @@ title: "一个由于在非main queue进行了UIKit操作导致的奇怪的故障
 date: "2016-03-11"
 categories: 
   - "ios"
+comment_id: "2016-03-11-一个由于在非main-queue进行了uikit操作导致的奇怪的故障"
 ---
 
 今天调试app的时候，发现了一个奇怪的bug，当app需要pushViewController的时候，会出现一个奇怪的现象，就是push和pop的动画不会出现，即使animated参数都是YES。这个现象不是每次运行必然复现，而是运行10次，大概会有3到4次出现这个现象。

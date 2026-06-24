@@ -11,6 +11,7 @@ tags:
   - "superimposed"
   - "uilabel"
   - "重叠"
+comment_id: "2016-06-29-ios-uilabel显示了重叠文字（gets-combined-superimposed-overlapped）"
 ---
 
 [![Screen Shot 2016-06-30 at 12.07.11 AM](/images/Screen-Shot-2016-06-30-at-12.07.11-AM.png)](/images/Screen-Shot-2016-06-30-at-12.07.11-AM.png)

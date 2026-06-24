@@ -6,6 +6,7 @@ tags:
   - "c"
   - "postgres"
   - "extension"
+comment_id: "2023-11-03-更新了pg_cjk_parser，让它同时支持postgres11到16"
 ---
 
 2023年10月，我离开了Flexport，离开后，我对[pg_cjk_parser](https://github.com/huangjimmy/pg_cjk_parser)进行了更新。

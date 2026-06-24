@@ -4,6 +4,7 @@ title: "Visual Studio Code has crashed!"
 date: "2015-12-23"
 categories: 
   - "misc"
+comment_id: "2015-12-23-visual-studio-code-has-crashed"
 ---
 
 今天升级了Visual Studio Code for OSX，结果发现启动后总是报错误“Visual Studio Code has crashed”。

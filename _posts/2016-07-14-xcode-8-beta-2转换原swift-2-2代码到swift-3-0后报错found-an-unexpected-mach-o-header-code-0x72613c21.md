@@ -5,6 +5,7 @@ date: "2016-07-14"
 categories: 
   - "ios"
   - "swift"
+comment_id: "2016-07-14-xcode-8-beta-2转换原swift-2-2代码到swift-3-0后报错found-an-unexpected-mach-o-header-code-0x72613c21"
 ---
 
 今天试用了Xcode 8 Beta 2，尝试将之前Swift 2.2的代码转换为Swift 3.转换的过程一波三折，Swift 3改动十分大。

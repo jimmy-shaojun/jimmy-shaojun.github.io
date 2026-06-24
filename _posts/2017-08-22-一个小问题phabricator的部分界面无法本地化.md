@@ -5,6 +5,7 @@ date: "2017-08-22"
 tags: 
   - "phabricator"
   - "php"
+comment_id: "2017-08-22-一个小问题phabricator的部分界面无法本地化"
 ---
 
 最近我进行了一些Phabricator本地化的工作，在这个过程中，我发现Phabricator的一小部分界面始终无法翻译，即使我在[PhabricatorCNChineseTranslation.php](https://github.com/liuqian1990/phabricator-zh_CN)中添加了相应的翻译项。

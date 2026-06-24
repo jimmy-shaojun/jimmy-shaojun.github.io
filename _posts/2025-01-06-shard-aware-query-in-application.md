@@ -8,6 +8,7 @@ tags:
   - "shard"
   - "ror"
   - "postgres"
+comment_id: "2025-01-06-shard-aware-query-in-application"
 ---
 
 I was working for a e-Commerce client that use PostgreSQL and [Citus](https://www.citusdata.com/). The Client uses Citus to turn Postgres into a distributed sharding clusters. Usually developers do not need to worry about the underlying sharding but when I encoutered a query timeout in a Ruby on Rails applicaiton, I found that I needed to optimize the code to query directly in each shard node.

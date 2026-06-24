@@ -4,6 +4,7 @@ title: "cellForRowAtIndexPath: not called，cellForRowAtIndexPath不被调用"
 date: "2016-06-28"
 categories: 
   - "ios"
+comment_id: "2016-06-28-cellforrowatindexpath-not-called，cellforrowatindexpath不被调用"
 ---
 
 今天遇到了一个神奇的事情 tableView:cellForRowAtIndexPath:这个方法，我的TableViewDataSource里已经实现了，可是，无论如何，都不会被调用。 我在numberOfRowsInSection和numberOfSectionsInTableView和cellForRowAtIndexPath三处都设置了断点，然而，前两个方法都得到了调用，唯独最后一个cellForRowAtIndexPath，无论如何都不会被调用。

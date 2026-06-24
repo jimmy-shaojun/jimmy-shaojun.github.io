@@ -7,6 +7,7 @@ tags:
   - "openjdk"
   - "java"
   - "muniversal"
+comment_id: "2024-09-27-macports-macos15-cannot-install-openjdk17"
 ---
 
 I was trying to install openjdk17 and openjdk20 after upgrading to macports 2.10 and macOS 15 Sequoia

@@ -8,6 +8,7 @@ categories:
 tags: 
   - "ponydebugger"
   - "python"
+comment_id: "2016-06-12-ponydebugger安装错误：could-not-find-a-version-that-satisfies-the-requirement-pybonjour1-1-1"
 ---
 
 之前一直用Reveal，不过Reveal只能查看View Hierarchy，而我听说PonyDebugger不仅仅可以查看View Hierarchy，还能debug network traffic和view core data，所以决定也集成PonyDebugger。

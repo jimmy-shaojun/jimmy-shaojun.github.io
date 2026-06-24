@@ -9,6 +9,7 @@ tags:
   - "objc"
   - "runtime"
   - "swizzle"
+comment_id: "2015-02-07-一个奇怪的crash-uikeyboardlayoutstar-release"
 ---
 
 今天写代码的时候，突然发现如果我在键盘出现的状态下，按下Home键使得App从Foreground切换到Background的时候，App就会触发一个exception导致crash，这个crash的信息在我看来很奇怪。

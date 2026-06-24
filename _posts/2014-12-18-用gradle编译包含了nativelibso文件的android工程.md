@@ -4,6 +4,7 @@ title: "用gradle编译包含了nativelib(so文件)的Android工程"
 date: "2014-12-18"
 categories: 
   - "android"
+comment_id: "2014-12-18-用gradle编译包含了nativelibso文件的android工程"
 ---
 
 2014年7月，我进行了一个跨部门的项目，该项目包含iOS和Android版本，iOS版本很快就弄好了，但是Android版本却在配置管理上让我走了些弯路。

@@ -4,6 +4,7 @@ title: "iPhone 6和6 plus的App Icon and Image Resolution Guide"
 date: "2014-12-18"
 categories: 
   - "ios"
+comment_id: "2014-12-18-iphone-6和6-plus的app-icon-and-image-resolution-guide"
 ---
 
 Launch Screen Image

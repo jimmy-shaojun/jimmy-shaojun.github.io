@@ -4,6 +4,7 @@ title: "定位崩溃UIKit`+[UIViewController _viewControllerForFullScreenPresent
 date: "2016-07-26"
 # categories: 
 #   - "ios"
+comment_id: "2016-07-26-定位崩溃uikituiviewcontroller-_viewcontrollerforfullscreenpresentationfromview"
 ---
 
 问题描述 最近在开发中遇到了一个crash，该crash可以稳定复现，复现的步骤如下， 1 在一个navigation controller中，push一个包含scroll view的view controller 2 在该view controller中，点击一个按钮，然后push另一个包含了scroll view新的view controller。 3 pop当前的view controller，回到步骤1中的view controller 4 按iOS的status bar，此时，应用crash

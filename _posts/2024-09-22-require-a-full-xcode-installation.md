@@ -6,6 +6,7 @@ tags:
   - "openjdk"
   - "xcode"
   - "macports"
+comment_id: "2024-09-22-require-a-full-xcode-installation"
 ---
 
 I want to install openjdk via macports on macOS 15 Sequoia but got below error message.

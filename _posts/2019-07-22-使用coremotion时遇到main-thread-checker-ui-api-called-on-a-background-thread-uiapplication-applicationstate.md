@@ -8,6 +8,7 @@ tags:
   - "applicationstate"
   - "coremotion"
   - "main-thread-checker"
+comment_id: "2019-07-22-使用coremotion时遇到main-thread-checker-ui-api-called-on-a-background-thread-uiapplication-applicationstate"
 ---
 
 > 2019年8月1日更新：根据本人测试，在iOS 13 Developer Beta 5，iPhone XS Max上，本bug已经不再出现，App调用CoreMotion不会再出现Main Thread Checker: UI API called on a background thread: -\[UIApplication applicationState\] 错误。

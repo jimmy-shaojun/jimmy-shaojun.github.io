@@ -6,6 +6,7 @@ tags:
   - "docker"
   - "lima"
   - "vm"
+comment_id: "2024-03-19-replace-docker-desktop-with-lima-vm-macos"
 ---
 
 In this article, Docker refers to Docker Engine, an open source containerization technology for building and containerizing your application. Docker is based on Linux container technology, an OS-level virtualization method for running multiple isolated Linux systems, a.k.a. containers , on a control host using a single Linux kernel.

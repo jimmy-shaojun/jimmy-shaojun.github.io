@@ -6,6 +6,7 @@ tags:
   - "nextjs"
   - "frontend"
   - "backend"
+comment_id: "2021-10-30-nextjs的pre-rendering和server-side-rendering"
 ---
 
 加入Amazon已经一年多了，最近，我的工作涉及到Team的一个旧的前端组件的迁移。该组件使用的技术已经在公司内部要淘汰了，因此，我需要将该组件迁移到Amazon的Card framework上。在工作之余，我想要同时尝试下Amazon之外的技术。我听说nextjs是一个很受欢迎的frontend framework，于是我尝试了一下nextjs。

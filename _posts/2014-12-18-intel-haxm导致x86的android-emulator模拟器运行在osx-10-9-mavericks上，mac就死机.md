@@ -4,6 +4,7 @@ title: "Intel HAXM导致x86的android emulator模拟器运行在OSX 10.9 maveric
 date: "2014-12-18"
 categories: 
   - "android"
+comment_id: "2014-12-18-intel-haxm导致x86的android-emulator模拟器运行在osx-10-9-mavericks上，mac就死机"
 ---
 
 2013年12月的时候，当时还用的OS X 10.9，用Mac开发android的时候遇到了一个烦人的问题，装上了HAXM，intel hardware accelerated execution manager以后，一运行android emulator x86，mac就死机了，无论按键盘还是移动鼠标，mac都不反应，只能长按电源键关机再开机。

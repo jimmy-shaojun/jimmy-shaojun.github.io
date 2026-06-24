@@ -7,6 +7,7 @@ tags:
   - "pre-render"
   - "build"
   - "standalone"
+comment_id: "2022-02-04-如何以standalone模式编译并部署nextjs应用"
 ---
 
 最近，我在编写一个nextjs应用，在考虑前端的部署的时候，突然想到，难道我要将nextjs对应的node_modules目录都一起部署吗？于是，我看了nextjs的文档，发现了[standalone](https://nextjs.org/docs/pages/api-reference/next-config-js/output).

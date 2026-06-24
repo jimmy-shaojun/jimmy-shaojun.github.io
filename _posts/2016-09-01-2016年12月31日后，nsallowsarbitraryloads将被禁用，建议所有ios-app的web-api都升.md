@@ -13,6 +13,7 @@ tags:
   - "ios"
   - "ios10"
   - "tls"
+comment_id: "2016-09-01-2016年12月31日后，nsallowsarbitraryloads将被禁用，建议所有ios-app的web-api都升"
 ---
 
 苹果的iOS 10正式版本马上就要发布了，而自iOS 10开始，苹果对于网络安全将更加重视，2016年12月31日以后，你将不能用NSAllowsArbitraryLoads来禁止App Transport Security了。

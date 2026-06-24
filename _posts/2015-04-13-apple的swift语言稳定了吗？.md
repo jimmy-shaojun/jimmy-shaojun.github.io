@@ -5,6 +5,7 @@ date: "2015-04-13"
 categories: 
   - "ios"
   - "swift"
+comment_id: "2015-04-13-apple的swift语言稳定了吗？"
 ---
 
 Apple推出了Swift语言，这引起了业内的广泛关注，然而，Swift仍然在迅速的演化之中，业内也不停地在讨论以下问题

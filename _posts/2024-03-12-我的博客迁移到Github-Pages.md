@@ -6,6 +6,7 @@ tags:
   - "misc"
   - "liquid"
   - "github"
+comment_id: "2024-03-12-我的博客迁移到Github-Pages"
 ---
 
 今天，我将我的博客 huang.sh 从wordpress迁移到了Github Pages

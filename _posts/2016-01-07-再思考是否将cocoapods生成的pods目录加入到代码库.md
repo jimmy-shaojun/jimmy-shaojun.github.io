@@ -4,6 +4,7 @@ title: "再思考是否将CocoaPods生成的Pods/目录加入到代码库"
 date: "2016-01-07"
 categories: 
   - "ios"
+comment_id: "2016-01-07-再思考是否将cocoapods生成的pods目录加入到代码库"
 ---
 
 CocoaPods是一个流行的Cocoa依赖管理工具，Mac和iOS的开发团队几乎都在使用CocoaPods。我们只需要编写Podfile，并在之中指定依赖的库，然后在命令行运行pod install，CocoaPods就会从自动安装上各种依赖，并生成Pods/目录和Podfile.lock，其中，Pods目录包含了工程所依赖的各种库的源文件或者二进制lib文件（库的作者有可能选择发布已经编译好的二进制文件而非源文件，如PayPal SDK），Podfile.lock则包含了所安装的库的版本信息，这包括版本号和hash值。

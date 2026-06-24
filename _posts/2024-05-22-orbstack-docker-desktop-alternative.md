@@ -6,6 +6,7 @@ tags:
   - "docker"
   - "orbstack"
   - "vm"
+comment_id: "2024-05-22-orbstack-docker-desktop-alternative"
 ---
 
 In March 2024, I wrote an article about using [lima-vm](https://github.com/lima-vm) instead of [Docker Desktop](https://www.docker.com/products/docker-desktop/). Today, I find another Docker Desktop alternative [OrbStack](https://orbstack.dev/).

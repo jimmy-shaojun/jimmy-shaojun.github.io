@@ -10,6 +10,7 @@ tags:
   - "i18n"
   - "postmortem"
   - "ci"
+comment_id: "2026-04-12-six-layers-of-silent-failure-behind-one-smoke-test"
 ---
 
 **Severity:** high — complete *silent* failure of the French ledger's OFX import, tax-table seeding, and T2125 individual chart, with no error surfaced to the user. A single bilingual-onboarding smoke test failed for the French path; what looked like one bug turned out to be six, each hiding the next.

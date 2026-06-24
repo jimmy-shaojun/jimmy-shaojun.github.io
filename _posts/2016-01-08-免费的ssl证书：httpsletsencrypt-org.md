@@ -6,6 +6,7 @@ categories:
   - "misc"
   - "安全"
   - "电子商务"
+comment_id: "2016-01-08-免费的ssl证书：httpsletsencrypt-org"
 ---
 
 今天想着给自己的blog加上ssl证书，最开始想的是用免费的，结果最后发现了https://letsencrypt.org/，不仅免费，而且部署自动化，非常方便。

@@ -11,6 +11,7 @@ tags:
   - "ios"
   - "webview"
   - "相机"
+comment_id: "2017-03-12-iosandroid的webview中用file-input支持拍照或选择相册的照片"
 ---
 
 如果我们的一个移动端的网页需要让用户上传一张照片，那么，通常而言，我们可以写了以下一段HTML代码

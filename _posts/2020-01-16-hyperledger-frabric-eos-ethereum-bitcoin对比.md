@@ -19,6 +19,7 @@ tags:
   - "区块链"
   - "智能合约"
   - "比特币"
+comment_id: "2020-01-16-hyperledger-frabric-eos-ethereum-bitcoin对比"
 ---
 
 Fabric的知识源于 [https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html](https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html)

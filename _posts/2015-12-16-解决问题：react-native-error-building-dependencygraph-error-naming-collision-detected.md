@@ -7,6 +7,7 @@ categories:
   - "ios"
   - "nodejs"
   - "react"
+comment_id: "2015-12-16-解决问题：react-native-error-building-dependencygraph-error-naming-collision-detected"
 ---
 
 React Native是Facebook出品的一款支持iOS和Android的跨平台开发框架，可以让工程师用reactjs编写iOS和Android应用，不过在使用过程中，我们都会遇到一些问题。

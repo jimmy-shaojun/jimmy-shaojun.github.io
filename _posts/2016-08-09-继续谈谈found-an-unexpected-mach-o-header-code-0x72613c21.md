@@ -5,6 +5,7 @@ date: "2016-08-09"
 categories: 
   - "ios"
   - "swift"
+comment_id: "2016-08-09-继续谈谈found-an-unexpected-mach-o-header-code-0x72613c21"
 ---
 
 在 [之前一篇文章](https://huang.sh/2016/07/xcode-8-beta-2%e8%bd%ac%e6%8d%a2%e5%8e%9fswift-2-2%e4%bb%a3%e7%a0%81%e5%88%b0swift-3-0%e5%90%8e%e6%8a%a5%e9%94%99found-an-unexpected-mach-o-header-code-0x72613c21/)中，我提到，我使用Xcode 8 Beta 2打开之前的工程，并将Swift 2.2的代码转换为Swift 3之后，再度编译工程，Xcode就会报错误`Found an unexpected Mach-O header code: 0x72613c21`。
